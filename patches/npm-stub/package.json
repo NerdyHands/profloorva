@@ -1,0 +1,5 @@
+{
+  "name": "npm",
+  "version": "11.17.0",
+  "description": "Stub package to satisfy @relume_io/relume-ui without pulling vulnerable bundled deps"
+}
