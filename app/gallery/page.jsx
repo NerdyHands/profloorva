@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/GalleryPage";
+import Page from "../../src/views/GalleryPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

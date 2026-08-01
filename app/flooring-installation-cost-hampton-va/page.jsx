@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/CostGuidePage";
+import Page from "../../src/views/CostGuidePage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

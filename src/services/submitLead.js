@@ -13,7 +13,7 @@ import {
 export async function submitLead({ address, phone, source, flooringType }) {
   if (!AIRTABLE_TOKEN) {
     throw new Error(
-      "Airtable is not configured. Set VITE_AIRTABLE_TOKEN in your .env file.",
+      "Airtable is not configured. Set NEXT_PUBLIC_AIRTABLE_TOKEN in your .env.local file.",
     );
   }
 

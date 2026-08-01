@@ -21,7 +21,7 @@ export function buildPageMetadata(pathname) {
   const page = getPageMeta(pathname);
 
   return {
-    title: page.title,
+    title: { absolute: page.title },
     description: page.description,
     keywords: SITE_KEYWORDS,
     authors: [{ name: SITE_NAME }],

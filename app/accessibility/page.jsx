@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/AccessibilityPage";
+import Page from "../../src/views/AccessibilityPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

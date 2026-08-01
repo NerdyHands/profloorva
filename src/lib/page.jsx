@@ -1,7 +1,7 @@
 import { JsonLd } from "../components/JsonLd";
 import { buildPageMetadata, getPageJsonLd } from "./metadata";
 
-/** Shared helpers for thin app/*/page.jsx route files */
+/** Shared helpers for thin app route page.jsx files */
 export function pageMetadata(pathname) {
   return buildPageMetadata(pathname);
 }

@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/LaminateRemovalPage";
+import Page from "../../src/views/LaminateRemovalPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

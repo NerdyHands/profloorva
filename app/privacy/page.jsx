@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/PrivacyPage";
+import Page from "../../src/views/PrivacyPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

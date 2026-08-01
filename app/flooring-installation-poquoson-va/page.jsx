@@ -1,4 +1,4 @@
-﻿import LocationPage from "../../src/pages/LocationPage";
+import LocationPage from "../../src/views/LocationPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

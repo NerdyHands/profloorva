@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/FlooringGuidePage";
+import Page from "../../src/views/FlooringGuidePage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 

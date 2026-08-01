@@ -1,4 +1,4 @@
-﻿import Page from "../../src/pages/KitchenBathroomFlooringPage";
+import Page from "../../src/views/KitchenBathroomFlooringPage";
 import { PageWithJsonLd, pageMetadata } from "../../src/lib/page";
 import { ROUTES } from "../../src/config/routes";
 
