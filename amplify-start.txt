@@ -1,0 +1,18 @@
+﻿aws : urllib3\connectionpool.py:1064: InsecureRequestWarning: Unverified HTTPS request is being made to host 
+'amplify.us-east-1.amazonaws.com'. Adding certificate verification is strongly advised. See: 
+https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+At C:\Users\TW Davis\AppData\Local\Temp\ps-script-e692c292-a9d8-40c0-ba86-cdd2699e4282.ps1:97 char:1
++ aws amplify start-job --app-id d3vlz7g3qv2oft --branch-name main --jo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (urllib3\connect...ml#ssl-warnings:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{
+    "jobSummary": {
+        "jobArn": "arn:aws:amplify:us-east-1:337909748608:apps/d3vlz7g3qv2oft/branches/main/jobs/0000000004",
+        "jobId": "4",
+        "commitId": "HEAD",
+        "commitTime": "2026-08-01T16:54:29.143000-04:00",
+        "status": "PENDING"
+    }
+}

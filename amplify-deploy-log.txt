@@ -1,0 +1,4 @@
+2026-08-01T20:57:57 [INFO]: Beginning deployment for application d3vlz7g3qv2oft, branch:main, buildId 0000000004
+2026-08-01T20:57:57 [INFO]: Message ID: 9402483c-9452-405d-b223-570bf498c951
+2026-08-01T20:58:20 [INFO]: Due to optimizations in the CloudFront cache configuration, this deployment may take longer than usual. Subsequent builds will not face longer deploy times. View the caching documentation: https://docs.aws.amazon.com/amplify/latest/userguide/caching.html
+2026-08-01T21:01:39 [INFO]: Deployment complete
