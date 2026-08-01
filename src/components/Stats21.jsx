@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Dialog,
   DialogContent,
@@ -6,10 +8,11 @@ import {
 } from "@relume_io/relume-ui";
 import React from "react";
 import { FaCirclePlay } from "react-icons/fa6";
+import { IMAGES } from "../images.js";
 
 export function Stats21() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="results" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Results</p>
@@ -26,8 +29,8 @@ export function Stats21() {
             <Dialog>
               <DialogTrigger className="relative flex size-full w-full items-center justify-center">
                 <img
-                  src="https://assets-global.website-files.com/624380709031623bfe4aee60/6243807090316259584aee68_placeholder-video-thumbnail.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.videoThumbnail}
+                  alt="Pro Floor VA flooring installation video"
                   className="aspect-[3/2] size-full object-cover"
                 />
                 <span className="absolute inset-0 z-10 bg-black/50" />

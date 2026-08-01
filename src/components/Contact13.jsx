@@ -1,11 +1,17 @@
+"use client";
+
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
 import { BiEnvelope, BiMap, BiPhone } from "react-icons/bi";
 import { RxChevronRight } from "react-icons/rx";
+import { IMAGES } from "../images.js";
+import { BUSINESS_EMAIL, BUSINESS_PHONE } from "../seo.js";
 
 export function Contact13() {
+  const phoneHref = `tel:${BUSINESS_PHONE.replace(/\D/g, "")}`;
+  const emailHref = `mailto:${BUSINESS_EMAIL}`;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="contact" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mb-12 max-w-lg md:mb-18 lg:mb-20">
           <p className="mb-3 font-semibold md:mb-4">Reach out</p>
@@ -27,8 +33,8 @@ export function Contact13() {
                 Email
               </h3>
               <p className="mb-2">Send us a message</p>
-              <a className="underline" href="#">
-                hello@relume.io
+              <a className="underline" href={emailHref}>
+                {BUSINESS_EMAIL}
               </a>
             </div>
             <div>
@@ -39,8 +45,8 @@ export function Contact13() {
                 Phone
               </h3>
               <p className="mb-2">Call us directly</p>
-              <a className="underline" href="#">
-                (757) 555-0147
+              <a className="underline" href={phoneHref}>
+                {BUSINESS_PHONE}
               </a>
             </div>
             <div>
@@ -57,17 +63,24 @@ export function Contact13() {
                   variant="link"
                   size="link"
                   iconRight={<RxChevronRight />}
+                  onClick={() =>
+                    window.open(
+                      "https://www.google.com/maps/search/Pro+Floor+VA+Hampton+Virginia",
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
                 >
                   Get directions
                 </Button>
               </div>
             </div>
           </div>
-          <div>
+          <div className="w-full">
             <img
-              src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-              alt="Relume placeholder image"
-              className="size-full object-cover"
+              src={IMAGES.contactOffice}
+              alt="Pro Floor VA flooring company in Hampton, Virginia"
+              className="aspect-[40/21] w-full object-contain"
             />
           </div>
         </div>

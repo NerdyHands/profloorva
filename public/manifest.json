@@ -1,0 +1,27 @@
+{
+  "name": "Pro Floor VA",
+  "short_name": "Pro Floor VA",
+  "description": "Professional flooring installation in Hampton, Virginia",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#92400e",
+  "icons": [
+    {
+      "src": "/favicon-512.webp",
+      "type": "image/webp",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-192.webp",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/apple-touch-icon.webp",
+      "type": "image/webp",
+      "sizes": "180x180"
+    }
+  ]
+}

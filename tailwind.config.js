@@ -3,5 +3,8 @@ import relumePreset from "@relume_io/relume-tailwind";
 /** @type {import('tailwindcss').Config} */
 export default {
   presets: [relumePreset],
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: [
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+  ],
 };

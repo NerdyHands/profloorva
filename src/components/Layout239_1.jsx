@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
+import Link from "next/link";
 import { RxChevronRight } from "react-icons/rx";
+import { IMAGES } from "../images.js";
+import { ROUTES } from "../config/routes.js";
 
 export function Layout239_1() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="services" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
@@ -14,8 +19,8 @@ export function Layout239_1() {
                 Flooring solutions for every home
               </h2>
               <p className="md:text-md">
-                From classic hardwood warmth to modern vinyl durability, we
-                install what works best for your space and your life.
+                We install the right floor for your space — then point you to
+                the details that matter for each material.
               </p>
             </div>
           </div>
@@ -23,54 +28,109 @@ export function Layout239_1() {
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.serviceHardwood}
+                  alt="Hardwood flooring by Pro Floor VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                Hardwood installation
+                Hardwood
               </h3>
               <p>
-                Solid hardwood brings timeless beauty and lasting value to any
-                room in your Hampton home.
+                Solid and engineered wood that adds lasting value. Learn about
+                our{" "}
+                <Link
+                  href={ROUTES.hardwood}
+                  className="font-semibold text-amber-800 underline"
+                >
+                  hardwood flooring installation
+                </Link>{" "}
+                process for Hampton homes.
               </p>
             </div>
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.serviceLaminate}
+                  alt="Laminate flooring by Pro Floor VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                Laminate installation
+                Laminate
               </h3>
               <p>
-                Durable laminate offers the look you want with the practicality
-                your family needs.
+                Durable look without the hardwood price. See what{" "}
+                <Link
+                  href={ROUTES.laminate}
+                  className="font-semibold text-amber-800 underline"
+                >
+                  laminate flooring installation
+                </Link>{" "}
+                includes and how fast it finishes.
               </p>
             </div>
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.serviceVinyl}
+                  alt="Vinyl flooring by Pro Floor VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
-                Vinyl installation
+                Vinyl plank
               </h3>
               <p>
-                Waterproof vinyl stands up to anything while maintaining the
-                aesthetic appeal of real wood.
+                Waterproof and ready for kitchens and baths. Explore{" "}
+                <Link
+                  href={ROUTES.vinyl}
+                  className="font-semibold text-amber-800 underline"
+                >
+                  vinyl plank flooring installation
+                </Link>{" "}
+                options for Hampton Roads.
               </p>
             </div>
           </div>
+          <p className="mt-10 max-w-2xl text-center text-neutral-700 md:mt-12">
+            Wondering about pricing? Read our guide to{" "}
+            <Link
+              href={ROUTES.costGuide}
+              className="font-semibold text-amber-800 underline"
+            >
+              flooring installation cost in Hampton, VA
+            </Link>
+            . Need prep or specialty work? See{" "}
+            <Link
+              href={ROUTES.subfloorRepair}
+              className="font-semibold text-amber-800 underline"
+            >
+              subfloor repair
+            </Link>
+            ,{" "}
+            <Link
+              href={ROUTES.kitchenBathroom}
+              className="font-semibold text-amber-800 underline"
+            >
+              kitchen and bathroom flooring
+            </Link>
+            , or{" "}
+            <Link
+              href={ROUTES.rentalFlooring}
+              className="font-semibold text-amber-800 underline"
+            >
+              flooring for rental properties
+            </Link>
+            .
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-            <Button variant="secondary">Schedule</Button>
-            <Button iconRight={<RxChevronRight />} variant="link" size="link">
-              Details
-            </Button>
+            <Link href={ROUTES.contact}>
+              <Button variant="secondary">Schedule a free estimate</Button>
+            </Link>
+            <Link
+              href={ROUTES.services}
+              className="inline-flex items-center gap-1 font-semibold"
+            >
+              All services <RxChevronRight />
+            </Link>
           </div>
         </div>
       </div>

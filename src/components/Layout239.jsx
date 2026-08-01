@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from "@relume_io/relume-ui";
 import React from "react";
+import Link from "next/link";
 import { RxChevronRight } from "react-icons/rx";
+import { IMAGES } from "../images.js";
+import { ROUTES } from "../config/routes.js";
 
 export function Layout239() {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section id="why-us" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
@@ -23,8 +28,8 @@ export function Layout239() {
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.whyUsInstallation}
+                  alt="Meticulous flooring installation by Pro Floor VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
@@ -38,8 +43,8 @@ export function Layout239() {
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.whyUsFast}
+                  alt="Fast professional flooring installation in Hampton, Virginia"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
@@ -53,8 +58,8 @@ export function Layout239() {
             <div className="flex w-full flex-col items-center text-center">
               <div className="rb-6 mb-6 md:mb-8">
                 <img
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-                  alt="Relume placeholder image"
+                  src={IMAGES.whyUsClean}
+                  alt="Clean and respectful flooring installation workspace in Hampton, Virginia"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
@@ -67,10 +72,12 @@ export function Layout239() {
             </div>
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-            <Button variant="secondary">Explore</Button>
-            <Button iconRight={<RxChevronRight />} variant="link" size="link">
-              More
-            </Button>
+            <Link href={ROUTES.gallery}>
+              <Button variant="secondary">Explore our work</Button>
+            </Link>
+            <Link href={ROUTES.gallery} className="inline-flex items-center gap-1 font-semibold">
+              See gallery <RxChevronRight />
+            </Link>
           </div>
         </div>
       </div>
