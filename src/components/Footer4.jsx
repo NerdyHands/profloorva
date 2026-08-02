@@ -47,6 +47,8 @@ const navLinks = [
   { label: "Gallery", to: ROUTES.gallery },
   { label: "Hardwood installation", to: ROUTES.hardwood },
   { label: "Vinyl plank installation", to: ROUTES.vinyl },
+  { label: "Click-lock installation", to: ROUTES.clickLock },
+  { label: "Flooring removal", to: ROUTES.flooringRemoval },
   { label: "Cost guide", to: ROUTES.costGuide },
   { label: "FAQ", to: ROUTES.faq },
   { label: "Contact us", to: ROUTES.contact },

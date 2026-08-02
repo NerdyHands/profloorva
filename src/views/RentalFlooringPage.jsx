@@ -68,8 +68,21 @@ export default function RentalFlooringPage() {
             >
               laminate flooring installation
             </Link>
-            . Both install quickly and hold up better than carpet in high-traffic
-            units. When old floors must come out first, we handle{" "}
+            . Both often use{" "}
+            <Link
+              href={ROUTES.clickLock}
+              className="font-semibold text-amber-800 underline"
+            >
+              click-lock flooring installation
+            </Link>{" "}
+            for speed. When old floors must come out first, we handle{" "}
+            <Link
+              href={ROUTES.flooringRemoval}
+              className="font-semibold text-amber-800 underline"
+            >
+              flooring removal and installation
+            </Link>{" "}
+            or dedicated{" "}
             <Link
               href={ROUTES.laminateRemoval}
               className="font-semibold text-amber-800 underline"
@@ -87,6 +100,42 @@ export default function RentalFlooringPage() {
               flooring installation cost guide
             </Link>
             , then ask about volume pricing for multiple properties.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Flooring for property managers
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Property managers need one point of contact, realistic turnaround
+            windows, and installs that hold up across units — not a different
+            finish standard every time a crew shows up. We coordinate access with
+            leasing and maintenance teams, keep scopes consistent building to
+            building, and quote volume work so multi-unit schedules stay
+            predictable.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            House flipper flooring that lists faster
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            House flippers and investors usually need durable mid-grade floors
+            that photograph well and finish on a tight closing timeline — without
+            paying for finishes a buyer will replace. We recommend materials that
+            balance cost, speed, and resale look, then schedule tear-out and
+            install so vacant rehabs move toward list day instead of sitting on
+            bare subfloors.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Landlord turnover, vacant, and foreclosure refreshes
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Every vacant day costs rent. Landlord turnover jobs — including
+            worn units, vacant properties, and foreclosure-style refreshes —
+            prioritize waterproof vinyl or tough laminate, clean removal of
+            damaged floors, and a schedule that gets the unit rent-ready.
+            Tell us your make-ready date; we scope removal and install together
+            so you are not coordinating two contractors for one turnover.
           </p>
 
           <ServiceFaqSection items={RENTAL_FAQ_ITEMS} />

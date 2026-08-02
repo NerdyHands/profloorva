@@ -18,6 +18,8 @@ export const ROUTES = {
   poquoson: "/flooring-installation-poquoson-va",
   subfloorRepair: "/subfloor-repair-hampton-va",
   laminateRemoval: "/laminate-flooring-removal-hampton-va",
+  flooringRemoval: "/flooring-removal-hampton-va",
+  clickLock: "/click-lock-flooring-installation-hampton-va",
   rentalFlooring: "/flooring-for-rental-properties-hampton-va",
   kitchenBathroom: "/kitchen-and-bathroom-flooring-hampton-va",
   maintenance: "/maintenance",

@@ -93,9 +93,60 @@ export const SUBFLOOR_FAQ_ITEMS = [
       "Yes. Subfloor inspection is part of every estimate. If repair is needed, we complete it before hardwood, vinyl, or laminate goes down so the new floor lasts.",
   },
   {
+    question: "Do you do floor leveling in Hampton, VA?",
+    answer:
+      "Yes. Floor leveling is part of our subfloor repair and floor preparation work. We fill dips, flatten high spots, and confirm the surface meets the flatness your new floor needs before install day.",
+  },
+  {
     question: "What causes subfloor problems in Hampton homes?",
     answer:
       "Humidity, plumbing leaks, poor ventilation, and age are common causes in Hampton Roads. Soft spots near baths and kitchens are frequent findings during walkthroughs.",
+  },
+];
+
+export const CLICK_LOCK_FAQ_ITEMS = [
+  {
+    question: "What is click-lock flooring installation?",
+    answer:
+      "Click-lock flooring installation uses planks that lock together at the edges and float over the subfloor instead of being glued or nailed down. It is common for laminate and many luxury vinyl plank products.",
+  },
+  {
+    question: "Is click-lock flooring the same as a floating floor?",
+    answer:
+      "Yes. Click-lock is the locking system; floating floor describes the install method. The floor expands and contracts as a single surface, so expansion gaps and a flat subfloor are critical.",
+  },
+  {
+    question: "Can I install click-lock flooring myself?",
+    answer:
+      "DIY click-lock installs are marketed heavily, but layout, underlayment, transitions, and subfloor prep decide whether the floor lasts. Most Hampton homeowners hire a pro when rooms are out of square, moisture is a concern, or they want a clean finish at doorways.",
+  },
+  {
+    question: "What prep does click-lock flooring need?",
+    answer:
+      "The subfloor must be clean, dry, and flat within the manufacturer's tolerance. Soft spots, dips, and moisture issues should be fixed first — otherwise seams open and the floor feels hollow underfoot.",
+  },
+];
+
+export const FLOORING_REMOVAL_FAQ_ITEMS = [
+  {
+    question: "How much does flooring removal and installation cost in Hampton, VA?",
+    answer:
+      "Cost depends on the material coming out, square footage, adhesive or underlayment, and the new floor going in. We quote removal with your new install so you see the full project cost upfront.",
+  },
+  {
+    question: "Do you remove tile, carpet, and old flooring?",
+    answer:
+      "Yes. We handle tile removal, carpet removal, and old flooring removal in Hampton, VA — including haul-away — then inspect the subfloor before the next install.",
+  },
+  {
+    question: "Can you remove old floors and install new ones on the same project?",
+    answer:
+      "Usually yes. Removal and installation are scheduled together whenever the subfloor is sound so you are not living on bare plywood longer than necessary.",
+  },
+  {
+    question: "Do you also remove laminate specifically?",
+    answer:
+      "Yes. For laminate-focused jobs, see our dedicated laminate flooring removal page. General tile, carpet, vinyl, and mixed tear-outs are covered on this flooring removal hub.",
   },
 ];
 
@@ -193,22 +244,22 @@ export const PAGE_SEO = {
     canonical: `${SITE_URL}${ROUTES.services}`,
   },
   [ROUTES.hardwood]: {
-    title: `Hardwood Flooring Installation Hampton VA | Pro Floor VA`,
+    title: `Hardwood Floor Installation Hampton VA | Pro Floor VA`,
     description:
-      "Solid and engineered hardwood flooring installation in Hampton, VA. Subfloor prep, acclimation, and expansion gaps included. Free in-home estimates.",
+      "Professional hardwood floor installation in Hampton, VA. Solid and engineered hardwood with subfloor prep, acclimation, and expansion gaps included. Free in-home estimates.",
     canonical: `${SITE_URL}${ROUTES.hardwood}`,
     schemaType: "Service",
-    serviceName: "Hardwood Flooring Installation",
+    serviceName: "Hardwood Floor Installation",
     serviceArea: "Hampton, VA",
     faqItems: HARDWOOD_FAQ_ITEMS,
   },
   [ROUTES.laminate]: {
-    title: `Laminate Flooring Installation Hampton VA | Pro Floor VA`,
+    title: `Laminate Floor Installation Hampton VA | Pro Floor VA`,
     description:
-      "Laminate flooring installation in Hampton, VA. Fast 1–2 day installs, moisture-resistant underlayment, and full cleanup. Free quotes for Hampton Roads.",
+      "Professional laminate floor installation in Hampton, VA. Fast 1–2 day installs, moisture-resistant underlayment, and full cleanup. Free quotes for Hampton Roads.",
     canonical: `${SITE_URL}${ROUTES.laminate}`,
     schemaType: "Service",
-    serviceName: "Laminate Flooring Installation",
+    serviceName: "Laminate Floor Installation",
     serviceArea: "Hampton, VA",
   },
   [ROUTES.vinyl]: {
@@ -295,12 +346,12 @@ export const PAGE_SEO = {
     serviceArea: "Poquoson, VA",
   },
   [ROUTES.subfloorRepair]: {
-    title: `Subfloor Repair Hampton VA | Pro Floor VA`,
+    title: `Subfloor Repair & Floor Leveling Hampton VA | Pro Floor VA`,
     description:
-      "Subfloor repair and replacement in Hampton, VA before new flooring installation. Soft spots, squeaks, and moisture damage fixed with a free estimate.",
+      "Subfloor repair, floor leveling, and floor preparation in Hampton, VA before new flooring installation. Soft spots, dips, and moisture damage fixed with a free estimate.",
     canonical: `${SITE_URL}${ROUTES.subfloorRepair}`,
     schemaType: "Service",
-    serviceName: "Subfloor Repair",
+    serviceName: "Subfloor Repair and Floor Leveling",
     serviceArea: "Hampton, VA",
     faqItems: SUBFLOOR_FAQ_ITEMS,
   },
@@ -313,6 +364,26 @@ export const PAGE_SEO = {
     serviceName: "Laminate Flooring Removal",
     serviceArea: "Hampton, VA",
     faqItems: LAMINATE_REMOVAL_FAQ_ITEMS,
+  },
+  [ROUTES.flooringRemoval]: {
+    title: `Flooring Removal and Installation Hampton VA | Pro Floor VA`,
+    description:
+      "Flooring removal and installation in Hampton, VA — tile, carpet, and old flooring tear-out with haul-away and subfloor inspection before your new floor.",
+    canonical: `${SITE_URL}${ROUTES.flooringRemoval}`,
+    schemaType: "Service",
+    serviceName: "Flooring Removal and Installation",
+    serviceArea: "Hampton, VA",
+    faqItems: FLOORING_REMOVAL_FAQ_ITEMS,
+  },
+  [ROUTES.clickLock]: {
+    title: `Click-Lock Flooring Installation Hampton VA | Pro Floor VA`,
+    description:
+      "Click-lock flooring installation in Hampton, VA. Floating floor installs for laminate and LVP with proper subfloor prep. Free estimates.",
+    canonical: `${SITE_URL}${ROUTES.clickLock}`,
+    schemaType: "Service",
+    serviceName: "Click-Lock Flooring Installation",
+    serviceArea: "Hampton, VA",
+    faqItems: CLICK_LOCK_FAQ_ITEMS,
   },
   [ROUTES.rentalFlooring]: {
     title: `Flooring for Rental Properties Hampton VA | Pro Floor VA`,
@@ -382,7 +453,7 @@ export const FAQ_ITEMS = [
   {
     question: "What about preparation and cleanup?",
     answer:
-      "We handle all prep work and leave your home clean when we finish. Minimal disruption means you can move back in immediately. That's our standard.",
+      "We handle prep and leave your home clean when we finish. For floor leveling, uneven subfloors, and deeper floor preparation, see our subfloor repair page in Hampton, VA — that is where leveling and structural prep are scoped before install.",
   },
   {
     question: "Do you work in Hampton only?",

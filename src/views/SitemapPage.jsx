@@ -12,7 +12,7 @@ const siteMapSections = [
       { label: "Home", to: ROUTES.home },
       { label: "About Pro Floor VA", to: ROUTES.about },
       { label: "Gallery", to: ROUTES.gallery },
-      { label: "Reviews", to: ROUTES.reviews },
+      // { label: "Reviews", to: ROUTES.reviews }, // fake reviews, not company data
       { label: "Contact / Get a Quote", to: ROUTES.contact },
       { label: "FAQ", to: ROUTES.faq },
     ],
@@ -24,7 +24,9 @@ const siteMapSections = [
       { label: "Hardwood Installation", to: ROUTES.hardwood },
       { label: "Laminate Installation", to: ROUTES.laminate },
       { label: "Vinyl Installation", to: ROUTES.vinyl },
+      { label: "Click-Lock Flooring Installation", to: ROUTES.clickLock },
       { label: "Subfloor Repair", to: ROUTES.subfloorRepair },
+      { label: "Flooring Removal", to: ROUTES.flooringRemoval },
       { label: "Laminate Flooring Removal", to: ROUTES.laminateRemoval },
       { label: "Flooring for Rental Properties", to: ROUTES.rentalFlooring },
       { label: "Kitchen and Bathroom Flooring", to: ROUTES.kitchenBathroom },

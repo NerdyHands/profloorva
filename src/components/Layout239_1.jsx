@@ -16,11 +16,11 @@ export function Layout239_1() {
             <div className="w-full max-w-lg">
               <p className="mb-3 font-semibold md:mb-4">Services</p>
               <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                Flooring solutions for every home
+                Floor installation for every home
               </h2>
               <p className="md:text-md">
-                We install the right floor for your space — then point you to
-                the details that matter for each material.
+                Professional floor installation for Hampton and Hampton Roads —
+                then the details that matter for each material.
               </p>
             </div>
           </div>
@@ -29,7 +29,7 @@ export function Layout239_1() {
               <div className="rb-6 mb-6 md:mb-8">
                 <img
                   src={IMAGES.serviceHardwood}
-                  alt="Hardwood flooring by Pro Floor VA"
+                  alt="Hardwood floor installation by Pro Floor VA in Hampton, VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
@@ -51,7 +51,7 @@ export function Layout239_1() {
               <div className="rb-6 mb-6 md:mb-8">
                 <img
                   src={IMAGES.serviceLaminate}
-                  alt="Laminate flooring by Pro Floor VA"
+                  alt="Laminate floor installation by Pro Floor VA in Hampton, VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
@@ -72,7 +72,7 @@ export function Layout239_1() {
               <div className="rb-6 mb-6 md:mb-8">
                 <img
                   src={IMAGES.serviceVinyl}
-                  alt="Vinyl flooring by Pro Floor VA"
+                  alt="Vinyl plank floor installation by Pro Floor VA in Hampton, VA"
                 />
               </div>
               <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">

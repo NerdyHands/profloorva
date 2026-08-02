@@ -64,9 +64,9 @@ export default function LocationPage({ citySlug }) {
             <Link href={ROUTES.about} className="font-semibold text-amber-800 underline">
               Learn about our Hampton Roads crew
             </Link>{" "}
-            or browse{" "}
-            <Link href={ROUTES.reviews} className="font-semibold text-amber-800 underline">
-              customer reviews
+            or browse the{" "}
+            <Link href={ROUTES.gallery} className="font-semibold text-amber-800 underline">
+              installation gallery
             </Link>
             .
           </p>

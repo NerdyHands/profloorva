@@ -188,7 +188,9 @@ export function Navbar7() {
                           <NavDropdownLink to={ROUTES.hardwood} title="Hardwood" description="Beautiful and durable for any home" />
                           <NavDropdownLink to={ROUTES.laminate} title="Laminate" description="Affordable elegance that lasts" />
                           <NavDropdownLink to={ROUTES.vinyl} title="Vinyl" description="Waterproof and easy to maintain" />
+                          <NavDropdownLink to={ROUTES.clickLock} title="Click-lock" description="Floating floor install method" />
                           <NavDropdownLink to={ROUTES.subfloorRepair} title="Subfloor repair" description="Fix soft spots before install" />
+                          <NavDropdownLink to={ROUTES.flooringRemoval} title="Flooring removal" description="Tile, carpet, and old floors out" />
                           <NavDropdownLink to={ROUTES.kitchenBathroom} title="Kitchen & bath" description="Waterproof wet-room floors" />
                           <NavDropdownLink to={ROUTES.services} title="All services" description="Every flooring service we offer" />
                         </div>
@@ -206,7 +208,7 @@ export function Navbar7() {
                         <div className="grid auto-cols-fr grid-cols-1 grid-rows-[max-content_max-content_max-content_max-content_max-content] gap-y-2 md:gap-y-4">
                           <h4 className="text-sm font-semibold leading-[1.3]">Company</h4>
                           <NavDropdownLink to={ROUTES.gallery} title="Gallery" description="See our completed projects" />
-                          <NavDropdownLink to={ROUTES.reviews} title="Reviews" description="What customers say about us" />
+                          {/* <NavDropdownLink to={ROUTES.reviews} title="Reviews" description="What customers say about us" /> — fake reviews, not company data */}
                           <NavDropdownLink to={ROUTES.blog} title="Blog" description="Tips and flooring insights" />
                           <NavDropdownLink to={ROUTES.costGuide} title="Cost guide" description="What affects flooring price" />
                           <NavDropdownLink to={ROUTES.flooringGuide} title="Flooring guide" description="Know before you buy" />
@@ -349,7 +351,9 @@ export function Navbar7() {
                       <Link href={ROUTES.hardwood} onClick={closeMobileMenu} className="py-2 text-md">Hardwood</Link>
                       <Link href={ROUTES.laminate} onClick={closeMobileMenu} className="py-2 text-md">Laminate</Link>
                       <Link href={ROUTES.vinyl} onClick={closeMobileMenu} className="py-2 text-md">Vinyl</Link>
+                      <Link href={ROUTES.clickLock} onClick={closeMobileMenu} className="py-2 text-md">Click-lock</Link>
                       <Link href={ROUTES.subfloorRepair} onClick={closeMobileMenu} className="py-2 text-md">Subfloor repair</Link>
+                      <Link href={ROUTES.flooringRemoval} onClick={closeMobileMenu} className="py-2 text-md">Flooring removal</Link>
                       <Link href={ROUTES.kitchenBathroom} onClick={closeMobileMenu} className="py-2 text-md">Kitchen & bath</Link>
                       <Link href={ROUTES.rentalFlooring} onClick={closeMobileMenu} className="py-2 text-md">Rental properties</Link>
                       <Link href={ROUTES.laminateRemoval} onClick={closeMobileMenu} className="py-2 text-md">Laminate removal</Link>
@@ -360,7 +364,7 @@ export function Navbar7() {
                       <Link href={ROUTES.contact} onClick={closeMobileMenu} className="py-2 text-md">Contact</Link>
                       <p className="mt-2 py-1 text-xs font-semibold uppercase tracking-wide text-neutral-500">Company</p>
                       <Link href={ROUTES.gallery} onClick={closeMobileMenu} className="py-2 text-md">Gallery</Link>
-                      <Link href={ROUTES.reviews} onClick={closeMobileMenu} className="py-2 text-md">Reviews</Link>
+                      {/* <Link href={ROUTES.reviews} onClick={closeMobileMenu} className="py-2 text-md">Reviews</Link> — fake reviews, not company data */}
                       <Link href={ROUTES.blog} onClick={closeMobileMenu} className="py-2 text-md">Blog</Link>
                       <Link href={ROUTES.costGuide} onClick={closeMobileMenu} className="py-2 text-md">Cost guide</Link>
                       <Link href={ROUTES.flooringGuide} onClick={closeMobileMenu} className="py-2 text-md">Flooring guide</Link>

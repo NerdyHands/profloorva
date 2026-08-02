@@ -72,6 +72,39 @@ export default function VinylPage() {
             pushing premium grades you don&apos;t need.
           </p>
 
+          <h2 className="mb-4 text-3xl font-bold">
+            Click-lock vinyl and floating installs
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Many LVP products use a floating{" "}
+            <Link
+              href={ROUTES.clickLock}
+              className="font-semibold text-amber-800 underline"
+            >
+              click-lock flooring installation
+            </Link>{" "}
+            system. The method page covers expansion gaps, underlayment, and
+            DIY-vs-pro decisions shared with laminate — without repeating the
+            waterproof material details on this page.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Need vinyl flooring removal first?
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Searching for vinyl flooring removal in Hampton, VA? Tear-out and
+            haul-away live on our{" "}
+            <Link
+              href={ROUTES.flooringRemoval}
+              className="font-semibold text-amber-800 underline"
+            >
+              flooring removal and installation
+            </Link>{" "}
+            hub — not on this install page. We remove old vinyl, carpet, tile,
+            and mixed flooring, then inspect the subfloor before your new LVP
+            goes down.
+          </p>
+
           <h2 className="mb-4 text-3xl font-bold">Prep and transitions</h2>
           <p className="mb-8 text-neutral-700">
             A flat, clean subfloor is the difference between a quiet, tight

@@ -26,9 +26,21 @@ export default function LaminatePage() {
       <section className="px-[5%] py-16 md:py-24">
         <div className="container mx-auto max-w-4xl">
           <p className="mb-8 text-lg text-neutral-700">
-            It&apos;s a strong fit for high-traffic rooms, rental properties,
-            and budget-conscious remodels where you still want the room to look
-            finished, not cheap.
+            Professional laminate floor installation is a strong fit for
+            high-traffic rooms, rental properties, and budget-conscious remodels
+            where you still want the room to look finished, not cheap — usually
+            completed in 1–2 days once the subfloor is ready.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Laminate floor installation for Hampton homes
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Laminate floor installation gives you the look of hardwood or tile
+            at a lower cost and a faster schedule. We cut clean seams, set
+            moisture-resistant underlayment where rooms need it, and leave
+            tight transitions so your laminate flooring installation in Hampton,
+            VA looks intentional — not rushed.
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">What&apos;s included</h2>
@@ -60,7 +72,14 @@ export default function LaminatePage() {
             >
               laminate flooring removal
             </Link>
-            . Comparing options? Also see{" "}
+            . Most laminate uses a floating{" "}
+            <Link
+              href={ROUTES.clickLock}
+              className="font-semibold text-amber-800 underline"
+            >
+              click-lock flooring installation
+            </Link>{" "}
+            method — see how that system works. Comparing options? Also see{" "}
             <Link href={ROUTES.vinyl} className="font-semibold text-amber-800 underline">
               vinyl plank installation
             </Link>

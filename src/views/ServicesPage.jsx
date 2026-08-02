@@ -28,11 +28,25 @@ const services = [
     linkLabel: "Vinyl plank flooring installation",
   },
   {
+    to: ROUTES.clickLock,
+    title: "Click-Lock Installation",
+    description:
+      "Floating click-lock installs for laminate and vinyl plank — proper prep, expansion gaps, and tight transitions.",
+    linkLabel: "Click-lock flooring installation",
+  },
+  {
     to: ROUTES.subfloorRepair,
     title: "Subfloor Repair",
     description:
       "Repair or replace damaged subfloors before new flooring goes down — soft spots, squeaks, and moisture issues included.",
     linkLabel: "Subfloor repair in Hampton, VA",
+  },
+  {
+    to: ROUTES.flooringRemoval,
+    title: "Flooring Removal",
+    description:
+      "Tile, carpet, vinyl, and old flooring removal with haul-away — then a ready surface for your next install.",
+    linkLabel: "Flooring removal and installation",
   },
   {
     to: ROUTES.laminateRemoval,

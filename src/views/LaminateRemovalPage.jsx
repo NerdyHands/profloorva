@@ -84,7 +84,15 @@ export default function LaminateRemovalPage() {
             >
               subfloor repair in Hampton, VA
             </Link>{" "}
-            before the new floor goes down.
+            before the new floor goes down. Removing tile, carpet, vinyl, or
+            mixed materials instead? See our general{" "}
+            <Link
+              href={ROUTES.flooringRemoval}
+              className="font-semibold text-amber-800 underline"
+            >
+              flooring removal and installation
+            </Link>{" "}
+            hub.
           </p>
 
           <ServiceFaqSection items={LAMINATE_REMOVAL_FAQ_ITEMS} />

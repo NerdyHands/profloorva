@@ -15,6 +15,7 @@ export default function ReviewsPage() {
       />
       <section className="px-[5%] py-16 md:py-24">
         <div className="container mx-auto max-w-4xl">
+          {/* Placeholder reviews commented out — not real Pro Floor VA company data
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
@@ -55,7 +56,8 @@ export default function ReviewsPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 text-center">
+          */}
+          <div className="text-center">
             <p className="mb-6 text-neutral-600">
               See our{" "}
               <Link href={ROUTES.gallery} className="font-semibold text-amber-800 underline">

@@ -69,11 +69,7 @@ export default function GalleryPage() {
           </div>
           <div className="mt-12 text-center">
             <p className="mb-6 text-neutral-600">
-              Want flooring like this in your home?{" "}
-              <Link href={ROUTES.reviews} className="font-semibold text-amber-800 underline">
-                Read customer reviews
-              </Link>{" "}
-              or get a free quote.
+              Want flooring like this in your home? Get a free quote below.
             </p>
             <Link
               href={ROUTES.contact}

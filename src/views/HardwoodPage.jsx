@@ -27,17 +27,30 @@ export default function HardwoodPage() {
       <section className="px-[5%] py-16 md:py-24">
         <div className="container mx-auto max-w-4xl">
           <p className="mb-6 text-lg text-neutral-700">
-            Subfloor prep, acclimation time, and expansion gaps are where most
-            hardwood installs go wrong. We handle all three as standard, not as
-            an upsell. Hampton&apos;s coastal humidity swings make those steps
-            even more important — skip them and you risk gaps, cupping, or
-            buckling months after the crew leaves.
+            Professional hardwood floor installation starts with the details
+            most crews rush: subfloor prep, acclimation time, and expansion
+            gaps. We handle all three as standard, not as an upsell.
+            Hampton&apos;s coastal humidity swings make those steps even more
+            important — skip them and you risk gaps, cupping, or buckling months
+            after the crew leaves.
           </p>
           <p className="mb-8 text-neutral-700">
             Whether you&apos;re replacing carpet in a living room, upgrading a
             worn hallway, or finishing a main-level remodel, we walk the job
             with you before quoting so the scope matches the room — not a
             one-size estimate from a sales script.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Hardwood floor installation done right
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Homeowners searching for hardwood floor installation want lasting
+            results, not just boards on the ground. Our Hampton crews measure
+            moisture, confirm flatness, and set expansion gaps so solid and
+            engineered hardwood perform in coastal humidity — the same care
+            that backs every hardwood flooring installation we schedule in
+            Hampton Roads.
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">What&apos;s included</h2>

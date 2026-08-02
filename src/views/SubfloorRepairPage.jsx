@@ -69,6 +69,23 @@ export default function SubfloorRepairPage() {
           </ul>
 
           <h2 className="mb-4 text-3xl font-bold">
+            Floor leveling and floor preparation in Hampton, VA
+          </h2>
+          <p className="mb-4 text-neutral-700">
+            Floor leveling in Hampton, VA is part of getting a new floor to sit
+            flat and quiet. We fill dips, flatten high spots, and confirm the
+            surface meets the flatness tolerance your hardwood, laminate, or
+            vinyl needs. General floor preparation also includes moisture
+            checks, fastening squeaky seams, and clearing debris so install day
+            is not spent chasing substrate problems.
+          </p>
+          <p className="mb-8 text-neutral-700">
+            Looking for floor leveling or general floor preparation before a
+            new install? This is the service that covers it — repair, leveling,
+            and prep scoped in your free estimate, not as a surprise mid-job.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
             How subfloor repair pairs with new flooring
           </h2>
           <p className="mb-4 text-neutral-700">
