@@ -83,7 +83,7 @@ export default function CostGuidePage() {
               <thead className="bg-neutral-900 text-white">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Flooring type</th>
-                  <th className="px-4 py-3 font-semibold">Typical installed cost</th>
+                  <th className="px-4 py-3 font-semibold">Main cost variables</th>
                 </tr>
               </thead>
               <tbody>
@@ -95,15 +95,7 @@ export default function CostGuidePage() {
                       </Link>
                     </td>
                     <td className="px-4 py-4 text-neutral-700">
-                      <Link
-                        href={ROUTES.contact}
-                        className="font-semibold text-amber-800 underline"
-                      >
-                        Get your exact price with a free quote
-                      </Link>
-                      <span className="mt-1 block text-sm text-neutral-500">
-                        {note}
-                      </span>
+                      {note}
                     </td>
                   </tr>
                 ))}
@@ -112,9 +104,9 @@ export default function CostGuidePage() {
           </div>
 
           <p className="mb-8 text-sm text-neutral-500">
-            Ranges depend on material grade, room size, and subfloor condition.
-            Every quote includes a free in-home walkthrough so the number you
-            get is the number you pay.
+            Online per-square-foot figures rarely include the same scope.
+            Material grade, room size, removal, and subfloor condition all
+            affect the completed project price.
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">What affects your price</h2>
@@ -126,6 +118,92 @@ export default function CostGuidePage() {
               </li>
             ))}
           </ul>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            What a flooring installation estimate should include
+          </h2>
+          <p className="mb-4 text-neutral-700">
+            A useful flooring estimate is more than square footage multiplied
+            by a labor rate. It should identify the rooms and material, state
+            whether old flooring is being removed, and explain who handles
+            furniture, appliances, baseboards, transitions, delivery, and
+            debris. It should also distinguish known preparation from repairs
+            that can only be confirmed after tear-out.
+          </p>
+          <ul className="mb-10 grid gap-3 text-neutral-700 sm:grid-cols-2">
+            {[
+              "Measured installation area and waste allowance",
+              "Flooring material and installation method",
+              "Removal, disposal, and haul-away",
+              "Underlayment or moisture-control requirements",
+              "Known leveling or subfloor repairs",
+              "Transitions, trim, stairs, and door clearances",
+              "Furniture or appliance responsibilities",
+              "Project schedule and payment terms",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3">
+                <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-amber-500" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            How we build your Hampton flooring quote
+          </h2>
+          <ol className="mb-10 space-y-4 text-neutral-700">
+            <li>
+              <strong className="text-neutral-900">1. Walk the space.</strong>{" "}
+              We measure rooms, closets, doorways, and transitions and note
+              stairs, appliances, and occupied areas.
+            </li>
+            <li>
+              <strong className="text-neutral-900">2. Check the floor.</strong>{" "}
+              We look for movement, visible damage, moisture concerns, and
+              uneven sections that may require preparation.
+            </li>
+            <li>
+              <strong className="text-neutral-900">3. Confirm the finish.</strong>{" "}
+              You choose the flooring category and finish details so the quote
+              reflects the product and installation method you actually want.
+            </li>
+            <li>
+              <strong className="text-neutral-900">4. Define the scope.</strong>{" "}
+              The estimate identifies included labor and project details,
+              making it easier to understand what can change if concealed
+              damage is uncovered.
+            </li>
+          </ol>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Comparing flooring quotes fairly
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Compare the total scope—not only the lowest line-item rate. One
+            contractor may include removal, leveling, transitions, and cleanup
+            while another lists only installation labor. Check the flooring
+            model, quantity, prep allowance, warranty responsibilities, and
+            exclusions on every bid. If two totals differ sharply, ask each
+            installer to explain the missing or different scope before choosing.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Estimates for rentals and multi-unit work
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            Landlords and property managers may need a repeatable flooring
+            standard, vacancy-sensitive scheduling, and separate scopes by
+            unit. Our{" "}
+            <Link
+              href={ROUTES.rentalFlooring}
+              className="font-semibold text-amber-800 underline"
+            >
+              rental property flooring service
+            </Link>{" "}
+            covers turnover planning and durable material choices. Share the
+            number of units, access details, target completion dates, and
+            whether the spaces are occupied when requesting an estimate.
+          </p>
 
           <p className="mb-8 text-neutral-700">
             More questions? See our{" "}

@@ -51,6 +51,16 @@ export const HARDWOOD_FAQ_ITEMS = [
     answer:
       "Yes. We inspect the subfloor on every estimate and fix soft spots, uneven areas, or moisture issues before install. See our subfloor repair service in Hampton, VA for details.",
   },
+  {
+    question: "How is engineered hardwood installed?",
+    answer:
+      "Engineered hardwood may be nailed, stapled, glued, or floated depending on the product and subfloor. We follow the flooring manufacturer's approved method and account for moisture control, expansion space, transitions, and door clearances.",
+  },
+  {
+    question: "Can engineered hardwood be installed over concrete?",
+    answer:
+      "Many engineered hardwood products can be glued or floated over a properly prepared concrete slab, but moisture conditions and product instructions must allow it. We evaluate the slab and the exact flooring before confirming the installation method.",
+  },
 ];
 
 export const VINYL_FAQ_ITEMS = [
@@ -73,6 +83,16 @@ export const VINYL_FAQ_ITEMS = [
     question: "Does vinyl need a level subfloor?",
     answer:
       "Yes. Uneven or soft subfloors telegraph through vinyl. We level and repair as needed — including dedicated subfloor repair in Hampton, VA — so seams stay tight and the floor feels solid underfoot.",
+  },
+  {
+    question: "What should I compare when choosing luxury vinyl plank?",
+    answer:
+      "Compare the wear layer, core construction, overall thickness, attached pad, edge profile, and installation requirements. The best LVP depends on room traffic, pets, sunlight, moisture exposure, and the condition of the floor below.",
+  },
+  {
+    question: "Do you remove old vinyl before installing new LVP?",
+    answer:
+      "Yes, when removal is part of the quoted scope. Some existing floors can remain only when the new product permits it and the surface is clean, sound, flat, and compatible. We inspect first rather than assuming an overlay will work.",
   },
 ];
 
@@ -171,6 +191,16 @@ export const LAMINATE_REMOVAL_FAQ_ITEMS = [
     answer:
       "You can, but most clients prefer we handle removal. We know how to protect adjacent finishes and check the subfloor as we go.",
   },
+  {
+    question: "Is glued laminate harder to remove than a floating floor?",
+    answer:
+      "Usually. Floating click-lock laminate can often be lifted in sections, while glued flooring requires more scraping and substrate cleanup. Multiple layers, stairs, tight access, and adhesive residue can also affect the removal scope.",
+  },
+  {
+    question: "Can you remove tile in rooms next to laminate?",
+    answer:
+      "Yes. Mixed-material projects are scoped through our general flooring removal service because tile may involve thinset or backer board and requires a different process than floating laminate.",
+  },
 ];
 
 export const RENTAL_FAQ_ITEMS = [
@@ -227,8 +257,10 @@ export const PAGE_SEO = {
   },
   [ROUTES.about]: {
     title: `About Us | Flooring Contractor Hampton VA | Pro Floor VA`,
+    // description:
+    //   "Pro Floor VA has installed hardwood, laminate, and vinyl flooring for Hampton homeowners for 15 years. Local crews, honest quotes, no subcontractors.",
     description:
-      "Pro Floor VA has installed hardwood, laminate, and vinyl flooring for Hampton homeowners for 15 years. Local crews, honest quotes, no subcontractors.",
+      "Pro Floor VA installs hardwood, laminate, and vinyl flooring for Hampton homeowners. Local crews, honest quotes, no subcontractors.",
     canonical: `${SITE_URL}${ROUTES.about}`,
   },
   [ROUTES.gallery]: {
@@ -246,7 +278,7 @@ export const PAGE_SEO = {
   [ROUTES.hardwood]: {
     title: `Hardwood Floor Installation Hampton VA | Pro Floor VA`,
     description:
-      "Professional hardwood floor installation in Hampton, VA. Solid and engineered hardwood with subfloor prep, acclimation, and expansion gaps included. Free in-home estimates.",
+      "Solid and engineered hardwood installation in Hampton, VA, with product-specific moisture checks, subfloor prep, acclimation, and free estimates.",
     canonical: `${SITE_URL}${ROUTES.hardwood}`,
     schemaType: "Service",
     serviceName: "Hardwood Floor Installation",
@@ -265,7 +297,7 @@ export const PAGE_SEO = {
   [ROUTES.vinyl]: {
     title: `Vinyl Plank Flooring Installation Hampton VA | Pro Floor VA`,
     description:
-      "Waterproof LVP and LVT flooring installation in Hampton, VA. Ideal for kitchens, baths, and mudrooms. Same-week scheduling in most cases.",
+      "Luxury vinyl plank and tile installation in Hampton, VA. Compare LVP products, prep, removal, timelines, and quote details. Free estimates.",
     canonical: `${SITE_URL}${ROUTES.vinyl}`,
     schemaType: "Service",
     serviceName: "Vinyl Plank Flooring Installation",
@@ -280,21 +312,23 @@ export const PAGE_SEO = {
   },
   [ROUTES.reviews]: {
     title: `Flooring Company Reviews Hampton VA | Pro Floor VA`,
+    // description:
+    //   "See what Hampton Roads homeowners say about Pro Floor VA flooring installation. Real reviews from satisfied customers.",
     description:
-      "See what Hampton Roads homeowners say about Pro Floor VA flooring installation. Real reviews from satisfied customers.",
+      "Learn about Pro Floor VA flooring installation in Hampton Roads — browse our gallery or request a free in-home quote.",
     canonical: `${SITE_URL}${ROUTES.reviews}`,
   },
   [ROUTES.faq]: {
     title: `Flooring Installation FAQ Hampton VA | Pro Floor VA`,
     description:
-      "Answers to common questions about flooring installation time, cost, prep, warranty, and service areas from Pro Floor VA in Hampton.",
+      "Flooring installation FAQ for Hampton, VA: answers about LVP, hardwood, estimates, subfloor repair, removal, prep, timing, and warranties.",
     canonical: `${SITE_URL}${ROUTES.faq}`,
     schemaType: "FAQPage",
   },
   [ROUTES.costGuide]: {
     title: `Flooring Installation Cost Hampton VA | Pro Floor VA`,
     description:
-      "How much does flooring installation cost in Hampton, VA? Learn what affects laminate, vinyl, and hardwood pricing — then get your exact free quote.",
+      "Learn what affects flooring installation cost in Hampton, VA, what a complete estimate includes, and how to compare hardwood, laminate, and LVP quotes.",
     canonical: `${SITE_URL}${ROUTES.costGuide}`,
   },
   [ROUTES.flooringGuide]: {
@@ -358,7 +392,7 @@ export const PAGE_SEO = {
   [ROUTES.laminateRemoval]: {
     title: `Laminate Flooring Removal Hampton VA | Pro Floor VA`,
     description:
-      "Professional laminate flooring removal in Hampton, VA with haul-away and subfloor inspection before your new install.",
+      "Laminate flooring removal in Hampton, VA for floating and glued floors, with haul-away, substrate cleanup, inspection, and replacement-floor prep.",
     canonical: `${SITE_URL}${ROUTES.laminateRemoval}`,
     schemaType: "Service",
     serviceName: "Laminate Flooring Removal",
@@ -443,17 +477,17 @@ export const FAQ_ITEMS = [
   {
     question: "How long does installation take?",
     answer:
-      "Most installations finish in two to three days depending on the size and type of flooring. We work efficiently without sacrificing quality. Your home returns to normal quickly.",
+      "Many single-room vinyl or laminate installations finish in a day once the subfloor is ready. Multi-room work, hardwood, removal, leveling, stairs, and detailed trim can extend the schedule. Your estimate includes a project-specific timeline.",
   },
   {
     question: "Do you handle all floor types?",
     answer:
-      "We install hardwood, laminate, and vinyl with equal precision. Each material gets the specific care it requires. We know the strengths and demands of every type.",
+      "We install solid and engineered hardwood, laminate, luxury vinyl plank, and luxury vinyl tile. We also remove common residential flooring and prepare the substrate for the replacement product.",
   },
   {
     question: "What about preparation and cleanup?",
     answer:
-      "We handle prep and leave your home clean when we finish. For floor leveling, uneven subfloors, and deeper floor preparation, see our subfloor repair page in Hampton, VA — that is where leveling and structural prep are scoped before install.",
+      "The quoted scope can include removal, debris haul-away, surface cleaning, minor preparation, transitions, and final cleanup. Floor leveling, damaged panels, and deeper repairs are identified separately so you know what preparation the new floor requires.",
   },
   {
     question: "Do you work in Hampton only?",
@@ -463,32 +497,47 @@ export const FAQ_ITEMS = [
   {
     question: "Can you match existing flooring?",
     answer:
-      "We can work with existing floors and match styles when needed. Bring samples or photos and we'll assess the possibilities. Continuity matters.",
+      "We can compare color, plank width, texture, sheen, and profile, but an exact match is not always available because products and finishes change over time. Bring a spare board or product information when possible; otherwise, we can discuss a deliberate transition or complementary material.",
   },
   {
     question: "What if I need repairs first?",
     answer:
-      "We inspect subfloors and address any issues before installation. A solid foundation makes the difference. Learn more about subfloor repair in Hampton, VA on our dedicated service page.",
+      "We inspect visible conditions and address quoted subfloor work before installation. Soft spots, swollen panels, movement, moisture damage, dips, or high areas may need repair or leveling so the replacement floor has a sound, flat base.",
   },
   {
     question: "Are there warranty options?",
     answer:
-      "We stand behind our work with solid warranties on installation. Details depend on your specific project. We'll explain everything upfront.",
+      "Installation workmanship and flooring-product warranties cover different things. We explain the workmanship terms for your project and help you understand the manufacturer's care, site-condition, and installation requirements before work begins.",
   },
   {
     question: "How much does installation cost?",
     answer:
-      "Pricing depends on material type, room size, and any prep work needed. We provide free quotes with no obligation. You'll know the cost before we start. See our flooring cost guide for what typically affects price.",
+      "Pricing depends on the flooring product, measured area, waste allowance, removal, subfloor preparation, stairs, transitions, trim, furniture or appliance handling, and disposal. A free walkthrough produces a scope-based quote for your rooms.",
   },
   {
     question: "Can you work around my schedule?",
     answer:
-      "We schedule installations at times that work for you. Most jobs finish quickly so disruption is minimal. We respect your time.",
+      "We discuss access, occupied rooms, pets, furniture, work-from-home needs, and target dates during scheduling. Product availability, acclimation, prep work, and project size determine the final installation window.",
   },
   {
     question: "What makes Pro Floor VA different?",
     answer:
-      "We combine speed with precision and treat your home like our own. We finish fast without cutting corners. That's the difference.",
+      "We define the scope after seeing the space, match the installation method to the product, and account for removal, substrate condition, transitions, and cleanup before work starts. That gives homeowners a clearer way to compare the proposed work.",
+  },
+  {
+    question: "Do I need to buy flooring before requesting an estimate?",
+    answer:
+      "No. You can request an estimate while comparing materials. If you already selected or purchased flooring, share the manufacturer and product details so we can review its installation method, quantity, and jobsite requirements.",
+  },
+  {
+    question: "Can new flooring go over my existing floor?",
+    answer:
+      "Sometimes, but only when the new product permits it and the existing surface is clean, dry, sound, flat, securely bonded, and compatible. Added floor height can also affect doors, appliances, stairs, and transitions, so we inspect before recommending an overlay.",
+  },
+  {
+    question: "How should I prepare rooms for installation?",
+    answer:
+      "Remove small items, valuables, wall hangings near the work area, and anything inside low closets. We confirm furniture, appliance, pet, access, and parking responsibilities in advance because the plan varies by project.",
   },
 ];
 

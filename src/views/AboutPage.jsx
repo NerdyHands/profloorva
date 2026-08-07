@@ -18,10 +18,13 @@ export default function AboutPage() {
 
   return (
     <PageLayout>
+      {/* Restore when verified:
+          subheading="Pro Floor VA has installed hardwood, laminate, and vinyl flooring for Hampton homeowners for 15 years. No subcontracted crews, no bait-and-switch estimates."
+      */}
       <PageHero
         label="About Pro Floor VA"
         heading="Flooring installed by people who actually live here"
-        subheading="Pro Floor VA has installed hardwood, laminate, and vinyl flooring for Hampton homeowners for 15 years. No subcontracted crews, no bait-and-switch estimates."
+        subheading="Pro Floor VA installs hardwood, laminate, and vinyl flooring for Hampton homeowners. No subcontracted crews, no bait-and-switch estimates."
       />
       <section className="px-[5%] py-16 md:py-24">
         <div className="container mx-auto max-w-4xl">
@@ -44,7 +47,7 @@ export default function AboutPage() {
               "Most installs finish in 2–3 days, not weeks",
               "You get one point of contact from quote to final walkthrough",
               "We inspect subfloors before we quote, so the price you're given is the price you pay",
-              "500+ installations completed for Hampton and Hampton Roads homeowners",
+              // "500+ installations completed for Hampton and Hampton Roads homeowners",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-amber-500" />

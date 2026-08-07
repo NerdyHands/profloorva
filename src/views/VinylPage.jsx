@@ -56,6 +56,27 @@ export default function VinylPage() {
           </ul>
 
           <h2 className="mb-4 text-3xl font-bold">
+            How to choose an LVP product
+          </h2>
+          <p className="mb-4 text-neutral-700">
+            A good luxury vinyl plank installation starts with a product suited
+            to the room, not just a color sample. The wear layer protects the
+            printed design, while the core affects dent resistance, sound, and
+            how forgiving the plank feels underfoot. Rigid SPC products are
+            typically firmer and highly stable; WPC products tend to feel
+            warmer and quieter. Product specifications and manufacturer
+            requirements matter more than labels such as “premium.”
+          </p>
+          <p className="mb-8 text-neutral-700">
+            We help Hampton homeowners compare wear layer, overall thickness,
+            attached pad, edge profile, and warranty requirements. Rooms with
+            pets, rolling chairs, direct sunlight, or heavy traffic may need a
+            different plank than a lightly used bedroom. If you already bought
+            material, we review the cartons and installation instructions
+            before work begins.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
             When vinyl plank is the better choice
           </h2>
           <p className="mb-4 text-neutral-700">
@@ -73,6 +94,39 @@ export default function VinylPage() {
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">
+            Our LVP installation process
+          </h2>
+          <ol className="mb-10 space-y-4 text-neutral-700">
+            {[
+              {
+                title: "Measure and plan.",
+                text: "We confirm square footage, plank direction, door clearances, transitions, and material waste before quoting.",
+              },
+              {
+                title: "Inspect the substrate.",
+                text: "The crew checks for moisture concerns, movement, soft areas, and high or low spots that could affect the finished floor.",
+              },
+              {
+                title: "Prepare and install.",
+                text: "Old flooring is removed when included, the surface is cleaned and flattened, and planks are laid to the product's required pattern and expansion spacing.",
+              },
+              {
+                title: "Finish the details.",
+                text: "Transitions, trim details, final cleanup, and a walkthrough complete the job.",
+              },
+            ].map(({ title, text }, index) => (
+              <li key={title} className="flex gap-4">
+                <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 font-bold text-amber-900">
+                  {index + 1}
+                </span>
+                <span>
+                  <strong className="text-neutral-900">{title}</strong> {text}
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          <h2 className="mb-4 text-3xl font-bold">
             Click-lock vinyl and floating installs
           </h2>
           <p className="mb-8 text-neutral-700">
@@ -86,6 +140,18 @@ export default function VinylPage() {
             system. The method page covers expansion gaps, underlayment, and
             DIY-vs-pro decisions shared with laminate — without repeating the
             waterproof material details on this page.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            What your vinyl flooring estimate covers
+          </h2>
+          <p className="mb-8 text-neutral-700">
+            An LVP flooring estimate should separate material quantity from
+            removal, floor preparation, installation, transitions, trim, and
+            haul-away. During the walkthrough, we also look for appliance
+            moves, stairs, closets, and adjoining floors that can change the
+            scope. That gives you a usable project price and makes competing
+            quotes easier to compare line by line.
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">

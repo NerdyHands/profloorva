@@ -3,6 +3,7 @@
 import { Button } from "@relume_io/relume-ui";
 import React, { useState } from "react";
 import Link from "next/link";
+import { AddressAutocomplete } from "../components/AddressAutocomplete";
 import { PageLayout } from "../components/PageLayout";
 import { PageHero } from "../components/PageHero";
 import { FLOORING_TYPES, LEAD_SOURCES } from "../config/leads";
@@ -20,26 +21,42 @@ export default function ContactPage() {
   const emailHref = `mailto:${BUSINESS_EMAIL}`;
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [formKey, setFormKey] = useState(0);
+  const [addressSelection, setAddressSelection] = useState({
+    isValidSelection: false,
+    address: "",
+    placeId: "",
+  });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus("submitting");
     setErrorMessage("");
 
+    if (!addressSelection.isValidSelection || !addressSelection.address) {
+      setStatus("error");
+      setErrorMessage("Select an address from the suggestions");
+      return;
+    }
+
+    setStatus("submitting");
     const formData = new FormData(event.currentTarget);
-    const address = formData.get("address");
     const phone = formData.get("phone");
     const flooringType = formData.get("flooringType");
 
     try {
       await submitLead({
-        address: String(address),
+        address: addressSelection.address,
         phone: String(phone),
         flooringType: String(flooringType),
         source: LEAD_SOURCES.CONTACT_PAGE,
       });
       setStatus("success");
-      event.currentTarget.reset();
+      setAddressSelection({
+        isValidSelection: false,
+        address: "",
+        placeId: "",
+      });
+      setFormKey((key) => key + 1);
     } catch (error) {
       setStatus("error");
       setErrorMessage(
@@ -78,16 +95,20 @@ export default function ContactPage() {
                 </button>
               </div>
             ) : (
-              <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+              <form
+                key={formKey}
+                className="flex flex-col gap-4"
+                onSubmit={handleSubmit}
+              >
                 <label className="flex flex-col gap-2 text-sm font-semibold text-neutral-800">
                   Property address
-                  <input
-                    type="text"
+                  <AddressAutocomplete
                     name="address"
                     placeholder="Street address, city"
                     className="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base font-normal text-neutral-900 placeholder:text-neutral-500 focus:border-amber-700 focus:outline-none"
                     required
                     disabled={status === "submitting"}
+                    onSelectionChange={setAddressSelection}
                   />
                 </label>
                 <label className="flex flex-col gap-2 text-sm font-semibold text-neutral-800">
@@ -95,7 +116,7 @@ export default function ContactPage() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="(757) 555-0100"
+                    placeholder="Phone number"
                     className="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base font-normal text-neutral-900 placeholder:text-neutral-500 focus:border-amber-700 focus:outline-none"
                     required
                     disabled={status === "submitting"}

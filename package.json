@@ -10,6 +10,7 @@
     "generate-favicons": "node scripts/generate-favicons.mjs"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^2.1.1",
     "@opinly/backend": "^1.4.0",
     "@opinly/next": "^1.4.0",
     "@opinly/react": "^1.4.0",

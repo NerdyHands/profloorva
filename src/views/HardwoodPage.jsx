@@ -88,6 +88,64 @@ export default function HardwoodPage() {
           </p>
 
           <h2 className="mb-4 text-3xl font-bold">
+            Engineered hardwood installation options
+          </h2>
+          <p className="mb-4 text-neutral-700">
+            Engineered hardwood uses a real-wood wear layer over a stable,
+            layered core. Depending on the product and substrate, it may be
+            nailed, stapled, glued, or installed as a floating floor. The
+            manufacturer&apos;s instructions, plank construction, subfloor
+            type, and room conditions determine the right method—not installer
+            preference alone.
+          </p>
+          <p className="mb-8 text-neutral-700">
+            Over wood subfloors, fastened installation is common when the
+            product allows it. Concrete slabs often require an approved
+            adhesive or floating system plus the specified moisture-control
+            steps. We review the exact flooring product before installation and
+            plan doorway heights, transitions, perimeter expansion space, and
+            stair or trim details as part of the scope.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Moisture, acclimation, and subfloor preparation
+          </h2>
+          <p className="mb-4 text-neutral-700">
+            Hardwood responds to changes in indoor humidity. Before work starts,
+            the material and jobsite need to meet the flooring
+            manufacturer&apos;s conditions, and wood flooring and wood
+            subfloors should be checked with appropriate moisture readings.
+            Acclimation is based on those conditions and product guidance—not
+            an automatic number of days for every species and home.
+          </p>
+          <p className="mb-8 text-neutral-700">
+            The substrate must also be clean, sound, and flat enough for the
+            selected plank width and installation system. Addressing movement,
+            damaged panels, or uneven sections before boards go down helps
+            prevent noise, loose areas, open joints, and avoidable finish
+            problems later.
+          </p>
+
+          <h2 className="mb-4 text-3xl font-bold">
+            Our hardwood flooring installation process
+          </h2>
+          <ol className="mb-10 space-y-4 text-neutral-700">
+            {[
+              "Measure the rooms and plan plank direction, focal points, transitions, and material quantity.",
+              "Confirm product requirements, site conditions, moisture readings, and subfloor readiness.",
+              "Complete included removal and preparation, then install with the approved fastening, adhesive, or floating method.",
+              "Finish transitions and trim details, clean the work area, and review the completed floor with you.",
+            ].map((item, index) => (
+              <li key={item} className="flex gap-4">
+                <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 font-bold text-amber-900">
+                  {index + 1}
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ol>
+
+          <h2 className="mb-4 text-3xl font-bold">
             Timeline for a typical hardwood job
           </h2>
           <p className="mb-4 text-neutral-700">
@@ -97,6 +155,14 @@ export default function HardwoodPage() {
             main-level square footage. You&apos;ll get a clear schedule before
             we start so you know when furniture needs to move and when you can
             walk on the finished floors.
+          </p>
+          <p className="mb-8 text-neutral-700">
+            Your estimate should state the flooring product, installation
+            method, measured area, removal and disposal, known subfloor work,
+            transitions, trim responsibilities, and any site-condition
+            requirements. Clear scope matters when comparing hardwood
+            contractors because a labor-only bid is not equivalent to a
+            complete removal, preparation, and installation quote.
           </p>
           <p className="mb-8 text-neutral-700">
             Still deciding between wood and waterproof options? Browse our{" "}
