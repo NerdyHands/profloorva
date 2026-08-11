@@ -1,32 +1,32 @@
 export const AIRTABLE_BASE_ID =
-  process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID || "appe6UzeNJTHKFRlj";
+  process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID || "app9jvMglrggu8G5G";
 
 export const AIRTABLE_TABLE_ID =
-  process.env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tbl5fzjOKXf6J6oY4";
+  process.env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tblCrGsM19m556yoF";
 
 export const AIRTABLE_TOKEN = process.env.NEXT_PUBLIC_AIRTABLE_TOKEN || "";
 
-/** Fixed Business select value for this site. */
-export const AIRTABLE_BUSINESS = "Pro Floor VA";
-
 /**
  * Airtable field names must match the Leads table exactly.
- * View: https://airtable.com/appe6UzeNJTHKFRlj/tbl5fzjOKXf6J6oY4/viwa5eMzCPsPXwonE
+ * Production table: app9jvMglrggu8G5G / tblCrGsM19m556yoF
  */
 export const AIRTABLE_FIELDS = {
-  leadName: "Lead Name",
+  name: "Name",
   address: "Address",
-  business: "Business",
+  phone: "Phone",
+  flooringType: "Flooring Type",
   status: "Status",
   source: "Source",
   notes: "Notes",
+  submittedAt: "Submitted At",
+  pageUrl: "Page URL",
 };
 
 export const AIRTABLE_STATUS = {
-  NEW: "New",
+  NEW: "Todo",
 };
 
-/** Source select option used for all website form submissions. */
+/** Fallback Source value when a form-specific source is not provided. */
 export const AIRTABLE_SOURCE = "website_form";
 
 export const LEAD_SOURCES = {

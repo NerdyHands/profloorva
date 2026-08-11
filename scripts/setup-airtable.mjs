@@ -12,8 +12,8 @@ const env = Object.fromEntries(
 );
 
 const token = env.NEXT_PUBLIC_AIRTABLE_TOKEN;
-const baseId = env.NEXT_PUBLIC_AIRTABLE_BASE_ID || "appe6UzeNJTHKFRlj";
-const tableId = env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tbl5fzjOKXf6J6oY4";
+const baseId = env.NEXT_PUBLIC_AIRTABLE_BASE_ID || "app9jvMglrggu8G5G";
+const tableId = env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tblCrGsM19m556yoF";
 
 if (!token) {
   console.error("Missing NEXT_PUBLIC_AIRTABLE_TOKEN");
@@ -47,12 +47,14 @@ async function api(path, options = {}) {
 }
 
 const EXPECTED_FIELDS = [
-  "Lead Name",
+  "Name",
   "Address",
-  "Business",
+  "Phone",
+  "Flooring Type",
   "Status",
   "Source",
-  "Notes",
+  "Submitted At",
+  "Page URL",
 ];
 
 console.log("Fetching base schema...");
@@ -85,12 +87,14 @@ const test = await api(`/${baseId}/${table.id}`, {
   method: "POST",
   body: JSON.stringify({
     fields: {
-      "Lead Name": "(757) 555-0100",
+      Name: "(757) 555-0100",
       Address: "TEST — delete me",
-      Business: "Pro Floor VA",
-      Status: "New",
+      Phone: "(757) 555-0100",
+      "Flooring Type": "Not sure yet",
+      Status: "Todo",
       Source: "website_form",
-      Notes: "Phone: (757) 555-0100\nForm: setup_script\nPage: https://profloorva.com/",
+      "Submitted At": new Date().toISOString(),
+      "Page URL": "https://profloorva.com/",
     },
   }),
 });
@@ -108,7 +112,6 @@ fs.writeFileSync(
       tableId: table.id,
       tableName: table.name,
       fields: EXPECTED_FIELDS,
-      business: "Pro Floor VA",
     },
     null,
     2,
