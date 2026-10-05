@@ -71,7 +71,7 @@ export async function submitLead({ address, phone, source, flooringType }) {
     );
   }
 
-  trackLeadSubmission({ source });
+  trackLeadSubmission({ source, flooringType: trimmedFlooring });
 
   return fields;
 }

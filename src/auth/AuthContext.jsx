@@ -6,6 +6,7 @@ import {
   signInWithPopup,
   signOut as firebaseSignOut,
 } from "firebase/auth";
+import posthog from "posthog-js";
 import { auth, googleProvider, isFirebaseConfigured } from "../firebase.js";
 
 const AuthContext = createContext({
@@ -31,6 +32,12 @@ export function AuthProvider({ children }) {
     return onAuthStateChanged(auth, (nextUser) => {
       setUser(nextUser);
       setLoading(false);
+      if (nextUser) {
+        posthog.identify(nextUser.uid, {
+          email: nextUser.email,
+          name: nextUser.displayName,
+        });
+      }
     });
   }, []);
 
@@ -46,6 +53,7 @@ export function AuthProvider({ children }) {
   const signOut = async () => {
     if (!auth) return;
     await firebaseSignOut(auth);
+    posthog.reset();
   };
 
   return (

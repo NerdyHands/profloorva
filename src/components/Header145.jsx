@@ -1,9 +1,10 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { LEAD_SOURCES } from "../config/leads.js";
 import { IMAGES } from "../images.js";
+import { useQuoteFunnel } from "../lib/useQuoteFunnel.js";
 import { BUSINESS_PHONE } from "../seo.js";
 import { submitLead } from "../services/submitLead.js";
 import { heroButtonClass } from "../styles/buttons.js";
@@ -19,14 +20,30 @@ export function Header145() {
     address: "",
     placeId: "",
   });
+  const funnel = useQuoteFunnel(LEAD_SOURCES.HERO_QUOTE);
+  const { onAddressSelection } = funnel;
+
+  const handleAddressSelection = useCallback(
+    (selection) => {
+      setAddressSelection(selection);
+      onAddressSelection(selection);
+    },
+    [onAddressSelection],
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setErrorMessage("");
 
-    if (!addressSelection.isValidSelection || !addressSelection.address) {
+    const addressValid = Boolean(
+      addressSelection.isValidSelection && addressSelection.address,
+    );
+    funnel.onSubmitAttempt({ addressValid });
+
+    if (!addressValid) {
       setStatus("error");
       setErrorMessage("Select an address from the suggestions");
+      funnel.onError("address_not_selected");
       return;
     }
 
@@ -48,12 +65,13 @@ export function Header145() {
       });
       setFormKey((key) => key + 1);
     } catch (error) {
-      setStatus("error");
-      setErrorMessage(
+      const message =
         error instanceof Error
           ? error.message
-          : "Something went wrong. Please try again or call us directly.",
-      );
+          : "Something went wrong. Please try again or call us directly.";
+      setStatus("error");
+      setErrorMessage(message);
+      funnel.onError("submit_failed", message);
     }
   };
 
@@ -95,7 +113,10 @@ export function Header145() {
                 </div>
               </div>
 
-              <div className="rounded-xl bg-white p-6 md:p-8">
+              <div
+                ref={funnel.containerRef}
+                className="rounded-xl bg-white p-6 md:p-8"
+              >
                 <h2 className="mb-2 text-2xl font-bold text-neutral-900 md:text-3xl">
                   Request a quote
                 </h2>
@@ -125,6 +146,7 @@ export function Header145() {
                     key={formKey}
                     className="flex flex-col gap-4"
                     onSubmit={handleSubmit}
+                    onFocus={funnel.onFormFocus}
                   >
                     <AddressAutocomplete
                       name="address"
@@ -132,7 +154,7 @@ export function Header145() {
                       className="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-neutral-900 placeholder:text-neutral-500 focus:border-amber-700 focus:outline-none"
                       required
                       disabled={status === "submitting"}
-                      onSelectionChange={setAddressSelection}
+                      onSelectionChange={handleAddressSelection}
                     />
                     <input
                       type="tel"

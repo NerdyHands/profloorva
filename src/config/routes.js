@@ -30,7 +30,7 @@ export const ROUTES = {
   sitemap: "/sitemap",
 };
 
-/** Static marketing routes (blog posts come from Opinly) */
+/** Static marketing routes (blog posts live in src/data/blogPosts.jsx) */
 export const MARKETING_ROUTES = Object.values(ROUTES);
 
 export const ANCHORS = {

@@ -1,29 +1,29 @@
-import {
-  OpinlyJsonLd,
-  buildBlogPostingJsonLd,
-  buildFaqJsonLd,
-} from "@opinly/next";
 import { BlogPostLayout } from "../BlogPostLayout";
-import { OpinlyPostContent } from "./OpinlyPostContent";
+import { JsonLd } from "../JsonLd";
 import { ROUTES } from "../../config/routes";
+import { SITE_URL, getArticleSchema } from "../../seo";
+import { blogPostPath } from "../../data/blogPosts";
 
 export function BlogPostView({ post }) {
-  const dek = post.description || post.dek || post.excerpt || "";
-
   return (
     <>
-      <OpinlyJsonLd data={buildBlogPostingJsonLd(post)} />
-      {post.faqs?.length ? <OpinlyJsonLd data={buildFaqJsonLd(post.faqs)} /> : null}
+      <JsonLd
+        data={getArticleSchema({
+          title: post.title,
+          description: post.description,
+          url: `${SITE_URL}${blogPostPath(post.slug)}`,
+          datePublished: post.publishedAt,
+        })}
+      />
       <BlogPostLayout
         title={post.title}
-        dek={dek}
+        dek={post.description}
         relatedLinks={[
+          ...(post.relatedLinks || []),
           { to: ROUTES.blog, label: "All blog articles" },
-          { to: ROUTES.services, label: "Our flooring services" },
-          { to: ROUTES.contact, label: "Get a free estimate" },
         ]}
       >
-        <OpinlyPostContent content={post.content} />
+        {post.body}
       </BlogPostLayout>
     </>
   );

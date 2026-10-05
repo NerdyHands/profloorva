@@ -338,9 +338,9 @@ export const PAGE_SEO = {
     canonical: `${SITE_URL}${ROUTES.flooringGuide}`,
   },
   [ROUTES.blog]: {
-    title: `Flooring Tips & Insights | Pro Floor VA Blog`,
+    title: `Flooring Tips and Insights | Pro Floor VA Blog`,
     description:
-      "Practical flooring advice for Hampton homeowners from the Pro Floor VA team — material comparisons, install timelines, and prep tips.",
+      "Practical advice for Hampton Roads homeowners choosing materials, planning an installation, and protecting a new floor.",
     canonical: `${SITE_URL}${ROUTES.blog}`,
   },
   [ROUTES.newportNews]: {
@@ -629,13 +629,14 @@ export function getServiceSchema({ serviceName, serviceArea, description, url })
   };
 }
 
-export function getArticleSchema({ title, description, url }) {
+export function getArticleSchema({ title, description, url, datePublished }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
     url,
+    ...(datePublished ? { datePublished } : {}),
     author: {
       "@type": "Organization",
       name: SITE_NAME,

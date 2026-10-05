@@ -58,6 +58,31 @@ export function buildPageMetadata(pathname) {
   };
 }
 
+export function buildBlogPostMetadata(post, pathname) {
+  const canonical = `${SITE_URL}${pathname}`;
+  const base = buildPageMetadata(pathname);
+
+  return {
+    ...base,
+    title: { absolute: post.seoTitle },
+    description: post.description,
+    alternates: { canonical },
+    openGraph: {
+      ...base.openGraph,
+      type: "article",
+      url: canonical,
+      title: post.seoTitle,
+      description: post.description,
+      publishedTime: post.publishedAt,
+    },
+    twitter: {
+      ...base.twitter,
+      title: post.seoTitle,
+      description: post.description,
+    },
+  };
+}
+
 export function getPageJsonLd(pathname) {
   const page = getPageMeta(pathname);
   const schemas = [];

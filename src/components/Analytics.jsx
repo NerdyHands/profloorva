@@ -2,7 +2,26 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { trackVirtualPageView } from "../analytics.js";
+import {
+  FUNNEL_EVENTS,
+  trackFunnelEvent,
+  trackVirtualPageView,
+} from "../analytics.js";
+
+function handleContactLinkClick(event) {
+  const link = event.target.closest?.('a[href^="tel:"], a[href^="mailto:"]');
+  if (!link) return;
+
+  const isPhone = link.getAttribute("href").startsWith("tel:");
+  const container = link.closest("section[id], header, footer, nav");
+  trackFunnelEvent(
+    isPhone ? FUNNEL_EVENTS.PHONE_CLICKED : FUNNEL_EVENTS.EMAIL_CLICKED,
+    {
+      link_text: link.textContent?.trim().slice(0, 100),
+      link_section: container?.id || container?.tagName.toLowerCase(),
+    },
+  );
+}
 
 /**
  * Pushes virtual_page_view to dataLayer on client-side route changes.
@@ -14,6 +33,12 @@ export function Analytics() {
   const isFirstRender = useRef(true);
 
   const search = searchParams?.toString() ? `?${searchParams.toString()}` : "";
+
+  useEffect(() => {
+    document.addEventListener("click", handleContactLinkClick, true);
+    return () =>
+      document.removeEventListener("click", handleContactLinkClick, true);
+  }, []);
 
   useEffect(() => {
     if (isFirstRender.current) {

@@ -1,13 +1,14 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import { AddressAutocomplete } from "../components/AddressAutocomplete";
 import { PageLayout } from "../components/PageLayout";
 import { PageHero } from "../components/PageHero";
 import { FLOORING_TYPES, LEAD_SOURCES } from "../config/leads";
 import { ROUTES } from "../config/routes";
+import { useQuoteFunnel } from "../lib/useQuoteFunnel";
 import { submitLead } from "../services/submitLead";
 import { heroButtonClass } from "../styles/buttons";
 import {
@@ -27,14 +28,30 @@ export default function ContactPage() {
     address: "",
     placeId: "",
   });
+  const funnel = useQuoteFunnel(LEAD_SOURCES.CONTACT_PAGE);
+  const { onAddressSelection } = funnel;
+
+  const handleAddressSelection = useCallback(
+    (selection) => {
+      setAddressSelection(selection);
+      onAddressSelection(selection);
+    },
+    [onAddressSelection],
+  );
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setErrorMessage("");
 
-    if (!addressSelection.isValidSelection || !addressSelection.address) {
+    const addressValid = Boolean(
+      addressSelection.isValidSelection && addressSelection.address,
+    );
+    funnel.onSubmitAttempt({ addressValid });
+
+    if (!addressValid) {
       setStatus("error");
       setErrorMessage("Select an address from the suggestions");
+      funnel.onError("address_not_selected");
       return;
     }
 
@@ -58,12 +75,13 @@ export default function ContactPage() {
       });
       setFormKey((key) => key + 1);
     } catch (error) {
-      setStatus("error");
-      setErrorMessage(
+      const message =
         error instanceof Error
           ? error.message
-          : "Something went wrong. Please try again or call us directly.",
-      );
+          : "Something went wrong. Please try again or call us directly.";
+      setStatus("error");
+      setErrorMessage(message);
+      funnel.onError("submit_failed", message);
     }
   };
 
@@ -76,7 +94,7 @@ export default function ContactPage() {
       />
       <section className="px-[5%] py-16 md:py-24">
         <div className="container mx-auto grid max-w-5xl gap-12 lg:grid-cols-2">
-          <div>
+          <div ref={funnel.containerRef}>
             {status === "success" ? (
               <div className="rounded-xl border border-amber-200 bg-amber-50 px-6 py-8 text-neutral-800">
                 <p className="text-xl font-semibold">Thanks — we got your request.</p>
@@ -99,6 +117,7 @@ export default function ContactPage() {
                 key={formKey}
                 className="flex flex-col gap-4"
                 onSubmit={handleSubmit}
+                onFocus={funnel.onFormFocus}
               >
                 <label className="flex flex-col gap-2 text-sm font-semibold text-neutral-800">
                   Property address
@@ -108,7 +127,7 @@ export default function ContactPage() {
                     className="w-full rounded-md border border-neutral-300 bg-white px-4 py-3 text-base font-normal text-neutral-900 placeholder:text-neutral-500 focus:border-amber-700 focus:outline-none"
                     required
                     disabled={status === "submitting"}
-                    onSelectionChange={setAddressSelection}
+                    onSelectionChange={handleAddressSelection}
                   />
                 </label>
                 <label className="flex flex-col gap-2 text-sm font-semibold text-neutral-800">
