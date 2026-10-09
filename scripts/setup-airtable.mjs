@@ -11,12 +11,12 @@ const env = Object.fromEntries(
     }),
 );
 
-const token = env.NEXT_PUBLIC_AIRTABLE_TOKEN;
+const token = env.AIRTABLE_TOKEN;
 const baseId = env.NEXT_PUBLIC_AIRTABLE_BASE_ID || "app9jvMglrggu8G5G";
 const tableId = env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tblCrGsM19m556yoF";
 
 if (!token) {
-  console.error("Missing NEXT_PUBLIC_AIRTABLE_TOKEN");
+  console.error("Missing AIRTABLE_TOKEN");
   process.exit(1);
 }
 

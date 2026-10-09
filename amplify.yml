@@ -6,6 +6,8 @@ frontend:
         - npm ci --cache .npm --prefer-offline
     build:
       commands:
+        # Server-only secrets must be written to .env.production to reach the SSR runtime.
+        - env | grep -E '^AIRTABLE_TOKEN=' >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next

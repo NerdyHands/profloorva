@@ -1,13 +1,11 @@
 "use client";
 
-import { Button, useMediaQuery } from "@relume_io/relume-ui";
+import { useMediaQuery } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import Link from "next/link";
 import { RxChevronDown, RxDotFilled } from "react-icons/rx";
-import { useAuth } from "../auth/AuthContext.jsx";
 import { IMAGES } from "../images.js";
-import { navPrimaryButtonClass } from "../styles/buttons.js";
 import { ROUTES, ANCHORS } from "../config/routes.js";
 import { BUSINESS_PHONE } from "../seo.js";
 
@@ -65,43 +63,6 @@ function NavDropdownLink({ href, to, title, description, onClick }) {
     <a href={href} onClick={onClick} className="block w-full">
       {inner}
     </a>
-  );
-}
-
-function AuthNavButton({ className = "", onClick }) {
-  const { user, loading, signIn, signOut } = useAuth();
-  const [busy, setBusy] = useState(false);
-
-  const handleClick = async () => {
-    if (busy || loading) return;
-    setBusy(true);
-    try {
-      if (user) {
-        await signOut();
-      } else {
-        await signIn();
-      }
-      onClick?.();
-    } catch (error) {
-      console.error("Firebase auth error:", error);
-      window.alert(error?.message || "Sign-in failed. Please try again.");
-    } finally {
-      setBusy(false);
-    }
-  };
-
-  const label = loading || busy ? "Please wait…" : user ? "Log out" : "Log in";
-
-  return (
-    <Button
-      title={label}
-      size="sm"
-      className={`${navPrimaryButtonClass} ${className}`}
-      onClick={handleClick}
-      disabled={loading || busy}
-    >
-      {label}
-    </Button>
   );
 }
 
@@ -248,11 +209,6 @@ export function Navbar7() {
               </AnimatePresence>
             </div>
           </div>
-
-          {/* Desktop auth */}
-          <div className="flex items-center gap-4">
-            <AuthNavButton />
-          </div>
         </div>
 
         {/* Mobile hamburger */}
@@ -381,11 +337,6 @@ export function Navbar7() {
                     </div>
                   </motion.div>
                 </AnimatePresence>
-              </div>
-
-              {/* Mobile auth */}
-              <div className="mt-6 flex flex-col gap-4">
-                <AuthNavButton className="w-full" onClick={closeMobileMenu} />
               </div>
             </div>
           </motion.div>

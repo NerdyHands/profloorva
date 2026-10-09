@@ -4,8 +4,6 @@ export const AIRTABLE_BASE_ID =
 export const AIRTABLE_TABLE_ID =
   process.env.NEXT_PUBLIC_AIRTABLE_TABLE_ID || "tblCrGsM19m556yoF";
 
-export const AIRTABLE_TOKEN = process.env.NEXT_PUBLIC_AIRTABLE_TOKEN || "";
-
 /**
  * Airtable field names must match the Leads table exactly.
  * Production table: app9jvMglrggu8G5G / tblCrGsM19m556yoF
